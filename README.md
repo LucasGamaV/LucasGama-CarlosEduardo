@@ -6,9 +6,9 @@
 * [Carlos Eduardo]
 
 ## Mapa
-<kbd>
-  <img src = "https://user-images.githubusercontent.com/99099086/191636955-5b1b66e2-6906-4f3e-a5be-a27506602950.png" width = "600px">
-</kbd>
+<div align="center">
+  <img src = "[https://user-images.githubusercontent.com/99099086/191636955-5b1b66e2-6906-4f3e-a5be-a27506602950.png](https://user-images.githubusercontent.com/114373261/192185899-2f604c91-f0ee-40eb-916f-2840468bfca9.jpeg)" width = "600px">
+</div>
 
 ## Descrição do jogo
 

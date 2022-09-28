@@ -33,7 +33,8 @@ public class Player {
                 System.out.println("O monstro dessa sala já está morto.");
             else{
                 System.out.println(ataque(monstro));
-                System.out.println(monsterAtaque(monstro));
+                if(monstro.getPontos_vida() > 0)
+                    System.out.println(monsterAtaque(monstro));
             }
         } else
             System.out.println("Não há monstros nessa sala.");
@@ -65,20 +66,15 @@ public class Player {
         String resultado = new String();
         // possível acerto
         if (gerador.nextBoolean()) {
-            // possível crítico
-            if (gerador.nextBoolean()) {
-                sofre_dano(monstro.getPontos_dano() * 2);
-                resultado = "O ataque do monstro foi crítico! Ele deu o dobro de dano (" + monstro.getPontos_dano() * 2 + ")";
-            } else {
-                sofre_dano(monstro.getPontos_dano());
-                resultado = "O ataque do monstro te acertou!";
-            }
+            sofre_dano(monstro.getPontos_dano());
+            resultado = "O ataque do monstro te acertou!";
             if (getPontos_vida() <= 0) {
                 resultado += "\nVoce foi derrotado!.";
                 in_combat = false;
             }
-        } else
-        resultado = "O monstro errou o ataque!";
+        } else {
+            resultado = "O monstro errou o ataque!";
+        }
         return resultado;
     }
     

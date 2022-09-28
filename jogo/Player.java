@@ -95,10 +95,10 @@ public class Player {
 
         if (nextRoom == null) {
             System.out.println("Não há porta nessa direção!");
-        } else if (sala_atual.temMonstro()) {
-            System.out.println("Há um monstro pra derrotar aqui!");
         } else if (in_combat) {
             System.out.println("Nada de fugir. É preciso primeiro derrotar o monstro!");
+        } else if (sala_atual.temMonstro() && sala_atual.getMonstro().getPontos_vida()>0) {
+            System.out.println("Há um monstro pra derrotar aqui!");
         } else {
             sala_atual = nextRoom;
             System.out.println(sala_atual.getLongDescription());

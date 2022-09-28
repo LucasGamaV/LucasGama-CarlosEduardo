@@ -103,8 +103,12 @@ public class Game {
 
         boolean finished = false;
         while (!finished) {
+            System.out.println("HP atual: " + jogador.getPontos_vida());
             Command command = parser.getCommand();
             finished = processCommand(command);
+            if(jogador.getPontos_vida() <= 0){
+                finished = true;
+            }
         }
         System.out.println("Obrigado por jogar! Até.");
     }
